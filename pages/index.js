@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import Login from '../components/Login'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import Button from '@material-ui/core/Button'
 
 export default function Home() {
 	return (
@@ -13,7 +14,17 @@ export default function Home() {
 					href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
 				/>
 			</Head>
-			<Login />
+			<div>See the old or the new one?</div>
+			<Link href='/old'>
+				<Button variant='contained' color='primary'>
+					Old
+				</Button>
+			</Link>
+			<Link href='/new'>
+				<Button variant='contained' color='primary'>
+					New
+				</Button>
+			</Link>
 		</div>
 	)
 }
